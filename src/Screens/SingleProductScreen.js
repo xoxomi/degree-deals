@@ -47,10 +47,10 @@ function SingleProductScreen() {
         </Text>
           <Buttone bg={Colors.blue} color={Colors.white} mt={10}>
             ADD TO CART
-            </Buttone>
-            <Review>
-              
-            </Review>
+          </Buttone>
+          <Review>
+            
+          </Review>
       </ScrollView>
     </Box>
   );  

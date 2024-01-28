@@ -13,6 +13,7 @@ const Colors = {
     periwinkle: "#CCCCFF",
     royalblue: "#4169E1",
     steelblue: "#4682B4",
+    red: "#FF0000"
     
 };
 

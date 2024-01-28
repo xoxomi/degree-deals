@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import {Box, Heading, VStack, FormControl, Select, Text, Textarea, CheckIcon} from "native-base"
+import {Box, Heading, VStack, FormControl, Buttone, Select, Text, Textarea, CheckIcon} from "native-base"; 
 import Colors from '../../data/Colors'
 import Messeges from './Notifications/Messeges';
 
+
 export default function Review ()  {
-    const [ratings, setRatings] = useState ('')
+    const[ratings, setRatings] = useState('')
   return (
   <Box my={9}>
         <Heading bold fontSize={19} mb={2}>
@@ -16,8 +17,7 @@ export default function Review ()  {
                 bold 
                 children={
                     "NO REVIEWS"
-                }
-                >
+                }>
          </Messeges>
         <Box p={3} bg={Colors.steelblue} mt={5} rounded={5}>
                 <Heading fontSize={15} color={Colors.black}>
@@ -40,47 +40,39 @@ export default function Review ()  {
                 </Heading>
                 <VStack space={6}>
                     <FormControl>
-                        <FormControl.Label 
-                        _text={{
-                            fontSize: "12px",
-                            fontWeight: "bold",
-                        }}>
-                        </FormControl.Label>
-                        Rating
-                    </FormControl>
-                    <Select
-                    bg={Colors.blue}
-                    borderWidth={0}
-                    rounded={5}
-                    py={4}
-                    placeholder="Choose Rate"
-                    _selectedItem={{
-                        bg: Colors.babyblue,
-                        endIcon: <CheckIcon size={3} />
-                    }}
-                    selectedValue={ratings}
-                    onValueChange={(e) => setRatings(e)}
-                    >
-                        <Select.Item label="1 - Poor" value="1" />
-                        <Select.Item label="2 - Fair" value="2" />
-                        <Select.Item label="3 - Good" value="3" />
-                    </Select>
+                            <FormControl.Label 
+                            _text={{
+                                fontSize: "12px",
+                                fontWeight: "bold",
+                            }}>
+                                Rating
+                            </FormControl.Label>
+                            
+                        <Select
+                            bg={Colors.blue}
+                            borderWidth={0}
+                            rounded={5}
+                            py={4}
+                            placeholder="Choose Rate"
+                            _selectedItem={{
+                                bg: Colors.babyblue,
+                                endIcon: <CheckIcon size={3} />,
+                                
+                            }}
+                            selectedValue={ratings}
+                            onValueChange={(e) => setRatings(e)}>
+                                <Select.Item label="1 - Poor" value="1" />
+                                <Select.Item label="2 - Fair" value="2" />
+                                <Select.Item label="3 - Good" value="3" />
+                        </Select>  
+                    </FormControl>   
                     <FormControl>
                         <FormControl.Label
                             _text={{
-                                    fontSize: "12px",
-                                    fontWeight: "bold",
-                                }}>
-                            Comment
+                                fontSize: "12px",
+                                fontWeight: "bold",
+                            }}>
                         </FormControl.Label>
-                        <Textarea
-                            h={20}
-                            w="full"
-                            placeholder="Write your comment here"
-                            borderWidth={0}
-                            bg={Colors.egyptianblue}
-                            py={2}>
-                        </Textarea>
                     </FormControl>
                 </VStack>
         </Box>
