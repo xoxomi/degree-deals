@@ -34,7 +34,7 @@ function SingleProductScreen() {
         </HStack>
       </ScrollView>
     </Box>
-  );
+  );  
 }
 
 export default SingleProductScreen;
