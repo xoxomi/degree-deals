@@ -10,7 +10,10 @@ const Colors = {
     blue: "#2A4883",
     black: "#000000",
     grey: "#D9D9D9",
-    periwinkle: "##CCCCFF"
+    periwinkle: "#CCCCFF",
+    royalblue: "#4169E1",
+    steelblue: "#4682B4",
+    
 };
 
 export default Colors;

@@ -3,6 +3,7 @@ import { Text, Box, ScrollView, Image, Heading, HStack, value, Spacer  } from 'n
 import Colors from '../data/Colors';
 import NumericInput from "react-native-numeric-input";
 import Buttone from './Components/Buttone';
+import Review from './Components/Review';
 
 
 function SingleProductScreen() {
@@ -43,10 +44,14 @@ function SingleProductScreen() {
         </HStack>
         <Text lineHeight={24} fontSize={13}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec sodales nibh, in condimentum ex. Mauris tempus consequat diam, vitae ultrices felis. Pellentesque aliquam mi diam, malesuada semper elit convallis sit amet. Nunc quis tellus efficitur, laoreet libero et, varius lorem. Praesent ac quam libero. Cras molestie orci vel consectetur venenatis. Integer suscipit odio in tellus sodales mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium orci vel sodales euismod. Suspendisse convallis, diam ullamcorper venenatis tincidunt, erat enim vehicula tellus, vitae sagittis arcu erat nec urna. Sed luctus magna magna, nec facilisis dolor cursus non. Fusce quis nunc fringilla, convallis mauris et, commodo ipsum.
-          </Text>
-          <Buttone bg={Colors.blue} color={Colors.white} mt={10}>ADD TO CART</Buttone>
+        </Text>
+          <Buttone bg={Colors.blue} color={Colors.white} mt={10}>
+            ADD TO CART
+            </Buttone>
+            <Review>
+              
+            </Review>
       </ScrollView>
-
     </Box>
   );  
 }
