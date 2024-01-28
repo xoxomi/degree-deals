@@ -1,6 +1,5 @@
-import { View, Text,} from 'react-native'
 import React, { useState } from 'react'
-import {Box, Heading, VStack, FormControl, Select, CheckIcon} from "native-base"
+import {Box, Heading, VStack, FormControl, Select, Text, Textarea, CheckIcon} from "native-base"
 import Colors from '../../data/Colors'
 import Messeges from './Notifications/Messeges';
 
@@ -53,17 +52,36 @@ export default function Review ()  {
                     bg={Colors.blue}
                     borderWidth={0}
                     rounded={5}
-                    py={3}
+                    py={4}
                     placeholder="Choose Rate"
                     _selectedItem={{
                         bg: Colors.babyblue,
                         endIcon: <CheckIcon size={3} />
                     }}
+                    selectedValue={ratings}
+                    onValueChange={(e) => setRatings(e)}
                     >
                         <Select.Item label="1 - Poor" value="1" />
                         <Select.Item label="2 - Fair" value="2" />
                         <Select.Item label="3 - Good" value="3" />
                     </Select>
+                    <FormControl>
+                        <FormControl.Label
+                            _text={{
+                                    fontSize: "12px",
+                                    fontWeight: "bold",
+                                }}>
+                            Comment
+                        </FormControl.Label>
+                        <Textarea
+                            h={20}
+                            w="full"
+                            placeholder="Write your comment here"
+                            borderWidth={0}
+                            bg={Colors.egyptianblue}
+                            py={2}>
+                        </Textarea>
+                    </FormControl>
                 </VStack>
         </Box>
     </Box>
