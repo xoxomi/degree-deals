@@ -2,11 +2,14 @@ import React from 'react';
 import { View, Text, Center, Heading, Box, Pressable, HStack, Button } from 'native-base';
 import { FontAwesome } from '@expo/vector-icons';
 import Colors from '../data/Colors';
+import { useNavigation } from '@react-navigation/native'; // Import useNavigation hook
 
 function ProfileScreen() {
+  const navigation = useNavigation();
+
   const handleLogout = () => {
-    // Logic for logging out
-    console.log("Logout pressed");
+   
+    navigation.navigate('Splash');
   };
 
   return (

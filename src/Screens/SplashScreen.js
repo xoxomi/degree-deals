@@ -18,7 +18,7 @@ const SplashScreen = ({ navigation }) => {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       {/* Customize your splash screen content */}
       <Image
-        source={require('../../assets/images/degreedeals-logo.png')} // Replace with the actual path to your logo
+        source={require('../../assets/images/degreedeals-logo1.png')} // Replace with the actual path to your logo
         style={{ width: 240, height: 250, resizeMode: 'contain' }} // Adjust width and height as needed
       />
     </View>
