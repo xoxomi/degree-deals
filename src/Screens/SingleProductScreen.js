@@ -1,12 +1,11 @@
 import React from 'react';
-import { Text, Box, ScrollView, Image, Heading, HStack, value, Spacer  } from 'native-base';
+import { Text, Box, ScrollView, Image, Heading, HStack, Spacer, value } from 'native-base';
 import Colors from '../data/Colors';
 import NumericInput from "react-native-numeric-input";
 import Buttone from './Components/Buttone';
 import Review from './Components/Review';
 
-
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons'; // Correct import statement
 
 function SingleProductScreen() {
   return (
@@ -20,7 +19,7 @@ function SingleProductScreen() {
           resizeMode="contain"
         />
         <Heading bold fontSize={15} mb={2} lineHeight={22}>
-        Pre-used Casio Science Calculator
+          Pre-used Casio Science Calculator
         </Heading>
         <HStack space={2} alignItems="center" my={5}>
           <NumericInput 
@@ -40,20 +39,18 @@ function SingleProductScreen() {
           />
           <Spacer>
             <Heading bold color={Colors.black} fontSize={20}>
-            ₱500
+              ₱500
             </Heading>
           </Spacer>
         </HStack>
         <Text lineHeight={24} fontSize={13}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec sodales nibh, in condimentum ex. Mauris tempus consequat diam, vitae ultrices felis. Pellentesque aliquam mi diam, malesuada semper elit convallis sit amet. Nunc quis tellus efficitur, laoreet libero et, varius lorem. Praesent ac quam libero. Cras molestie orci vel consectetur venenatis. Integer suscipit odio in tellus sodales mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium orci vel sodales euismod. Suspendisse convallis, diam ullamcorper venenatis tincidunt, erat enim vehicula tellus, vitae sagittis arcu erat nec urna. Sed luctus magna magna, nec facilisis dolor cursus non. Fusce quis nunc fringilla, convallis mauris et, commodo ipsum.
         </Text>
-          <Buttone bg={Colors.blue} color={Colors.white} mt={10}>
-            <MaterialCommunityIcons name="cart" size={24} color={Colors.white} />
-            ADD TO CART
-          </Buttone>
-          <Review>
-            
-          </Review>
+        <Buttone bg={Colors.blue} color={Colors.white} mt={10}>
+          <MaterialCommunityIcons name="cart" size={24} color={Colors.white} /> {/* Use MaterialCommunityIcons here */}
+          ADD TO CART
+        </Buttone>
+        <Review />
       </ScrollView>
     </Box>
   );  
