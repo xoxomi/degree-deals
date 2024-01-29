@@ -55,12 +55,13 @@ function LoginScreen ({navigation}) {
               my={30} 
               w="40%" 
               rounded={50} 
-              bg={Colors.zaffre}> 
+              bg={Colors.zaffre}
+              onPress={() => navigation.navigate("Bottom")}> 
 
 
             LOGIN 
             </Button>
-            <Pressable mt={4}> 
+            <Pressable mt={4} onPress={() => navigation.navigate("Signup")}> 
               <Text color={Colors.white}>
                 SIGN UP
                 </Text> 
