@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Center } from 'native-base';
+import { Center, Pressable } from 'native-base';
 import { Entypo, AntDesign, FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
 import HomeScreen from '../../HomeScreen';
 import ProfileScreen from '../../ProfileScreen';
@@ -56,12 +56,13 @@ const BottomNav = () => {
         name="Cart"
         component={CartScreen}
         options={{
-          tabBarIcon: ({ focused }) => (
+            tabBarButton: (props) => <CustomTab {...props} />,
+            tabBarIcon: ({ focused }) => (
             <Center>
               {focused ? (
                 <FontAwesome5 name="shopping-basket" size={24} color={Colors.blue} />
               ) : (
-                <AntDesign name="shoppingcart" size={24} color={Colors.blue} />
+                <AntDesign name="shoppingcart" size={24} color={Colors.white} />
               )}
             </Center>
           ),
