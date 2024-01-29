@@ -11,12 +11,12 @@ function HomeProducts() {
         flexWrap="wrap"
         direction="row"
         justifyContent="space-between"
-        px={6}
+        px={1}
       >
         {products.map((product) => (
           <Box
             key={product._id}
-            w="47%"
+            w="49%"
             bg={Colors.blue}
             rounded="md"
             mt={3}

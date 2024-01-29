@@ -12,14 +12,14 @@ function HomeSearch() {
     w="full"
     px={6}
     bg={Colors. blue}
-    py={4}
+    py={5}
     alignItems="center"
     safeAreaTop
     >
     <Input 
         placeholer="Uniform full set ..." 
-        w="85%" 
-        bg={Colors.white} 
+        w="90%" 
+        bg={Colors.grey} 
         type='search' 
         variant={filled}
         h={12}
@@ -29,7 +29,7 @@ function HomeSearch() {
     </Input>
 
     <Pressable ml={3}>
-       <FontAwesome5 name="shopping-basket" size={24} color="black" />
+       <FontAwesome5 name="shopping-basket" size={24} color="white" />
         <Box 
             px={1}
             rounded="full"

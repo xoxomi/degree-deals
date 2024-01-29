@@ -1,15 +1,13 @@
-import { View, Text, StyleSheet, Pressable } from 'react-native'
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import HomeScreen from '../../HomeScreen'
-import Colors from '../../../data/Colors'
-import { Center } from "native-base";
-import { Entypo, AntDesign, FontAwesome, FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
-import ProfileScreen from '../../ProfileScreen'
-import CartScreen from '../../CartScreen'
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Center } from 'native-base';
+import { Entypo, AntDesign, FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
+import HomeScreen from '../../HomeScreen';
+import ProfileScreen from '../../ProfileScreen';
+import CartScreen from '../../CartScreen';
+import Colors from '../../../data/Colors';
 
-
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator(); 
 const CustomTab = ({children, onPress}) => (
     <Pressable 
         onPress={onPress} 
@@ -23,79 +21,69 @@ const CustomTab = ({children, onPress}) => (
         {children}
     </Pressable>
 );
+
 const BottomNav = () => {
   return (
-    <Tab.Navigator 
-    backBehavior="main" 
-    initialRouteName="Main" 
-    screenOptions={{
-        tabBarShowLabel:false,
-        tabBarStyle:{...styles.tab},
-        headerShown:false,
-        tabBarHideOnKeyboard: true
-
-    }}>
-        <Tab.Screen 
-        name='Home' 
-        component={HomeScreen} 
+    <Tab.Navigator
+      backBehavior="main"
+      initialRouteName="Home"
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: Colors.white,
+          height: 60,
+          elevation: 0,
+        },
+        headerShown: false,
+        tabBarHideOnKeyboard: true,
+      }}>
+      <Tab.Screen
+        name="Main"
+        component={HomeScreen}
         options={{
-            tabBarIcon:({focused}) => (
+          tabBarIcon: ({ focused }) => (
             <Center>
-                {focused ? (
-                    <Entypo 
-                    name="home" 
-                    size={24} 
-                    color={Colors.blue} />
-                ) : (
-                    <MaterialCommunityIcons name="shopping-outline" size={24} color="black" />
-                )}
+              {focused ? (
+                <Entypo name="home" size={24} color={Colors.blue} />
+              ) : (
+                <MaterialCommunityIcons name="shopping-outline" size={24} color={Colors.blue} />
+              )}
             </Center>
-            )
-        }}/>
-        <Tab.Screen 
-        name='Cart' 
-        component={CartScreen} 
-        options={{ tabBarButton:(props) => 
-        <CustomTab {...props} />,           
-         tabBarIcon:({focused}) => (
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Cart"
+        component={CartScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
             <Center>
-                {focused ? (
-                    <FontAwesome5 
-                    name="shopping-basket" 
-                    size={24} 
-                    color={Colors.white} />
-                ) : (
-                    <AntDesign 
-                    name="home" 
-                    size={24} 
-                    color={Colors.white} />
-                )}
+              {focused ? (
+                <FontAwesome5 name="shopping-basket" size={24} color={Colors.blue} />
+              ) : (
+                <AntDesign name="shoppingcart" size={24} color={Colors.blue} />
+              )}
             </Center>
-            )
-        }}/>
-        <Tab.Screen name='Profile' component={ProfileScreen} options={{
-            tabBarIcon:({focused}) => (
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
             <Center>
-                {focused ? (
-                    <FontAwesome name="home" size={24} color={Colors.blue} />
-                ) : (
-                    <AntDesign name="" size={24} color={Colors.black} />
-                )}
+              {focused ? (
+                <FontAwesome name="user" size={24} color={Colors.blue} />
+              ) : (
+                <AntDesign name="user" size={24} color={Colors.blue} />
+              )}
             </Center>
-            )
-        }}/>
-        </Tab.Navigator>
-  )
-}
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  );
+};
 
-const styles = StyleSheet.create({
-    tab: {
-        elevation: 0,
-        backgroundColor: Colors.white,
-        height: 60,
-      
-    },
-})
-
-
-export default BottomNav
+export default BottomNav;

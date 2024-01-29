@@ -4,7 +4,7 @@ const products = [
       name: "PE Uniform Whole Set",
       image: "https:////drive.google.com/uc?id=1zttZWLNmN6eIsSEB2930b3hodKAFFNWj",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat odio at scelerisque gravida. Fusce accumsan commodo urna, in placerat nibh rutrum ac",
-      price: 650
+      price: 745
     },
     {
       _id: "2",
@@ -25,29 +25,36 @@ const products = [
       name: "USTP Uniform Pants",
       image: "https://drive.google.com/uc?id=17FHXO5yhpUkSSagwWcxKQS-udcpUUo2l",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat odio at scelerisque gravida. Fusce accumsan commodo urna, in placerat nibh rutrum ac",
-      price: 650
+      price: 450
     },
     {
       _id: "5",
       name: "PE Uniform Upper Shirt",
       image: "https://drive.google.com/uc?id=1Lf5jq28mhkYEU2Qmd1wdJ4d0M0Nht3Y2",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat odio at scelerisque gravida. Fusce accumsan commodo urna, in placerat nibh rutrum ac",
-      price: 650
+      price: 400
     },
     {
       _id: "6",
       name: "USTP Female Uniform",
       image: "https://drive.google.com/uc?id=1Ri3wJvk1pbU-oW2lDD5sSEGrjJezpWHE",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat odio at scelerisque gravida. Fusce accumsan commodo urna, in placerat nibh rutrum ac",
-      price: 650
+      price: 689
     },
     {
       _id: "7",
       name: "USTP Male Uniform",
       image: "https://drive.google.com/uc?id=1Aul7O9S2WcLAY0ohK3r8A_hm9FzGKoz_",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat odio at scelerisque gravida. Fusce accumsan commodo urna, in placerat nibh rutrum ac",
-      price: 650
-    }
+      price: 700
+    },
+    {
+      _id: "8",
+      name: "USTP Female Uniform",
+      image: "https://drive.google.com/uc?id=1Ri3wJvk1pbU-oW2lDD5sSEGrjJezpWHE",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat odio at scelerisque gravida. Fusce accumsan commodo urna, in placerat nibh rutrum ac",
+      price: 582
+    },
   ];
   
   export default products;
