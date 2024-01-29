@@ -16,12 +16,12 @@ function LoginScreen ({navigation}) {
           source= {require('../../assets/images/Cover1.png')} 
         />
          <Box
-          w="full"
-          h="full"
-          position="absolute"
-          top="0"
-          px="6"
-          justifyContent="center" 
+            w="full"
+            h="full"
+            position="absolute"
+            top="0"
+            px="6"
+            justifyContent="center" 
         >
           <Heading>LOGIN</Heading>
           <VStack space={5} pt="6">
@@ -36,7 +36,9 @@ function LoginScreen ({navigation}) {
               />
 
               <Input
-                InputLeftElement={<Ionicons name="eye-outline" size={24} color={Colors.zaffre }/>
+                InputLeftElement={<Ionicons name="eye-outline" 
+                size={24} 
+                color={Colors.zaffre }/>
                 } 
                 variant="underlined"
                 placeholder='user password'
@@ -49,17 +51,19 @@ function LoginScreen ({navigation}) {
           </VStack>
 
             <Button 
-            _pressed={{bg: Colors.main,}} 
-            my={30} 
-            w="40%" 
-            rounded={50} 
-            bg={Colors.zaffre}> 
-            
+              _pressed={{bg: Colors.main,}} 
+              my={30} 
+              w="40%" 
+              rounded={50} 
+              bg={Colors.zaffre}> 
+
 
             LOGIN 
             </Button>
             <Pressable mt={4}> 
-              <Text color={Colors.white}>SIGN UP</Text> 
+              <Text color={Colors.white}>
+                SIGN UP
+                </Text> 
             </Pressable>
 
          </Box>
