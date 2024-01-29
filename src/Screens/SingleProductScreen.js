@@ -6,6 +6,8 @@ import Buttone from './Components/Buttone';
 import Review from './Components/Review';
 
 
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 function SingleProductScreen() {
   return (
     <Box safeArea flex={1} bg={Colors.white}>
@@ -46,6 +48,7 @@ function SingleProductScreen() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec sodales nibh, in condimentum ex. Mauris tempus consequat diam, vitae ultrices felis. Pellentesque aliquam mi diam, malesuada semper elit convallis sit amet. Nunc quis tellus efficitur, laoreet libero et, varius lorem. Praesent ac quam libero. Cras molestie orci vel consectetur venenatis. Integer suscipit odio in tellus sodales mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium orci vel sodales euismod. Suspendisse convallis, diam ullamcorper venenatis tincidunt, erat enim vehicula tellus, vitae sagittis arcu erat nec urna. Sed luctus magna magna, nec facilisis dolor cursus non. Fusce quis nunc fringilla, convallis mauris et, commodo ipsum.
         </Text>
           <Buttone bg={Colors.blue} color={Colors.white} mt={10}>
+            <MaterialCommunityIcons name="cart" size={24} color={Colors.white} />
             ADD TO CART
           </Buttone>
           <Review>
