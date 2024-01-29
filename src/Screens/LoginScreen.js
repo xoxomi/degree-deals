@@ -4,7 +4,7 @@ import Colors from '../data/Colors'
 import { Fontisto, Ionicons } from '@expo/vector-icons';
 
 
-const LoginScreen = () => {
+function LoginScreen ({navigation}) {
   return (
     <Box flex={1} bg={Colors.pastelblue}>
         <Image 
@@ -43,15 +43,22 @@ const LoginScreen = () => {
                 w="70%"
                 type='password'
                 pl={2}
-                color={Colors.main}
+                color={Colors.white}
                 borderBottomColor={Colors.egyptianblue}
               />
           </VStack>
 
-            <Button _pressed={{bg: Colors.main,}} my={30} w="40%" rounded={50} bg={Colors.zaffre}> LOGIN 
+            <Button 
+            _pressed={{bg: Colors.main,}} 
+            my={30} 
+            w="40%" 
+            rounded={50} 
+            bg={Colors.zaffre}> 
+
+            LOGIN 
             </Button>
             <Pressable mt={4}> 
-              <Text color={Colors.main}>SIGN UP</Text> 
+              <Text color={Colors.white}>SIGN UP</Text> 
             </Pressable>
 
          </Box>

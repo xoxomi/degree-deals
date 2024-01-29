@@ -61,7 +61,7 @@ const BottomNav = () => {
             tabBarIcon: ({ focused }) => (
             <Center>
               {focused ? (
-                <FontAwesome5 name="shopping-basket" size={24} color={Colors.blue} />
+                <FontAwesome5 name="shopping-basket" size={24} color={Colors.white} />
               ) : (
                 <AntDesign name="shoppingcart" size={24} color={Colors.white } />
               )}
