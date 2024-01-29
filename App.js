@@ -11,6 +11,7 @@ import SingleProductScreen from './src/Screens/SingleProductScreen';
 import CartScreen from './src/Screens/CartScreen';
 import ProfileScreen from './src/Screens/ProfileScreen';
 import BottomNav from './src/Screens/Components/Navigations/BottomNav';
+import SplashScreen from './src/Screens/SplashScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +21,7 @@ export default function App() {
       <NavigationContainer>
         <StatusBar hidden={true} />
         <Stack.Navigator 
-        initialRouteName="Login" 
+        initialRouteName="Splash" 
         screenOptions={{
            headerShown: false,
            }}>
@@ -28,7 +29,8 @@ export default function App() {
           <Stack.Screen name="Signup" component={SignupScreen} />
           <Stack.Screen name="Cart" component={CartScreen} />
           <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Botton" component={BottomNav} />
+          <Stack.Screen name="Bottom" component={BottomNav} />
+          <Stack.Screen name="Splash" component={SplashScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
