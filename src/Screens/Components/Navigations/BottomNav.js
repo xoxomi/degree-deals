@@ -6,6 +6,7 @@ import HomeScreen from '../../HomeScreen';
 import ProfileScreen from '../../ProfileScreen';
 import CartScreen from '../../CartScreen';
 import Colors from '../../../data/Colors';
+import StackNav from './StackNav';
 
 const Tab = createBottomTabNavigator(); 
 const CustomTab = ({children, onPress}) => (
@@ -25,7 +26,7 @@ const CustomTab = ({children, onPress}) => (
 const BottomNav = () => {
   return (
     <Tab.Navigator
-      backBehavior="main"
+      backBehavior="Main"
       initialRouteName="Home"
       screenOptions={{
         tabBarShowLabel: false,
@@ -39,7 +40,7 @@ const BottomNav = () => {
       }}>
       <Tab.Screen
         name="Main"
-        component={HomeScreen}
+        component={StackNav}
         options={{
           tabBarIcon: ({ focused }) => (
             <Center>
@@ -62,7 +63,7 @@ const BottomNav = () => {
               {focused ? (
                 <FontAwesome5 name="shopping-basket" size={24} color={Colors.blue} />
               ) : (
-                <AntDesign name="shoppingcart" size={24} color={Colors.white} />
+                <AntDesign name="shoppingcart" size={24} color={Colors.white } />
               )}
             </Center>
           ),
