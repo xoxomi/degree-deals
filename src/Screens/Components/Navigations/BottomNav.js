@@ -47,7 +47,9 @@ const BottomNav = () => {
               {focused ? (
                 <Entypo name="home" size={24} color={Colors.blue} />
               ) : (
-                <MaterialCommunityIcons name="shopping-outline" size={24} color={Colors.blue} />
+                <MaterialCommunityIcons 
+                name="shopping-outline" 
+                size={24} color={Colors.blue} />
               )}
             </Center>
           ),

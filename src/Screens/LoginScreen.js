@@ -54,6 +54,7 @@ function LoginScreen ({navigation}) {
             w="40%" 
             rounded={50} 
             bg={Colors.zaffre}> 
+            
 
             LOGIN 
             </Button>
