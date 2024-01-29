@@ -18,7 +18,7 @@ const CartEmty = () => {
 
   return (
     <Box flex={1} px={4}>
-      <Center h="85%">
+      <Center h="80%">
         <Center w={200} h={200} bg={Colors.grey} rounded="full">
           <FontAwesome name="shopping-basket" size={64} color={Colors.white} />
         </Center>
