@@ -1,10 +1,16 @@
 import React from 'react';
-import { Box, ScrollView, Image, Text, Flex, Heading } from "native-base";
+import { Box, ScrollView, Image, Text, Flex, Heading, Pressable } from "native-base";
 import products from "../../data/products";
 import Colors from '../../data/Colors';
-import { Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-function HomeProducts() {
+const HomeProducts = () => {
+  const navigation = useNavigation();
+
+  const handleProductPress = (productId) => {
+    navigation.navigate('SingleProduct', { productId });
+  };
+
   return (
     <ScrollView flex={1}>
       <Flex
@@ -22,13 +28,13 @@ function HomeProducts() {
             mt={3}
             overflow="hidden"
           >
-            <Pressable>
+            <Pressable onPress={() => handleProductPress(product._id)}>
               <Image
                 source={{ uri: product.image }}
                 alt={product.name}
                 w="full"
-                h={200} // Adjust the height here
-                resizeMode="cover" // Make the image fit to the container
+                h={200}
+                resizeMode="cover"
               />
               <Box px={4} pb={4} pt={2}>
                 <Heading size="sm" bold color={Colors.white}>
@@ -44,6 +50,6 @@ function HomeProducts() {
       </Flex>
     </ScrollView>
   );
-}
+};
 
 export default HomeProducts;

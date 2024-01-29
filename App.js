@@ -31,6 +31,7 @@ export default function App() {
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Bottom" component={BottomNav} />
           <Stack.Screen name="Splash" component={SplashScreen} />
+          <Stack.Screen name="SingleProduct" component={SingleProductScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
