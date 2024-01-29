@@ -51,7 +51,7 @@ function LoginScreen ({navigation}) {
           </VStack>
 
             <Button 
-              _pressed={{bg: Colors.main,}} 
+              _pressed={{bg: Colors.white}} 
               my={30} 
               w="40%" 
               rounded={50} 
